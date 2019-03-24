@@ -1,0 +1,824 @@
+/* Général */
+
+
+@font-face {
+    font-family:'ManropeBold';;
+    src:url("../font/bold.woff2");
+    font-weight:normal;
+    font-style:normal;
+}
+
+@font-face {
+    font-family:'ManropeLight';;
+    src:url("../font/light.woff2");
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face {
+    font-family:'ManropeReg';;
+    src:url("../font/regular.woff2");
+    font-weight:normal;
+    font-style:normal;
+}
+body, html{
+
+
+    background:url("../img/bg.jpg");
+    background-position:center;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-size:cover;
+
+    color:white;
+
+}
+
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+input {
+    outline:none;
+    border:none;
+    box-shadow:none;
+}
+/* Navbar */
+
+header nav{
+
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items:center;
+    padding-top:20px;
+
+    background: #080516;
+
+
+
+
+
+}
+
+header nav img {
+    width:20%;
+}
+header nav .navbarleft a {
+    color:white;
+    font-family:'ManropeBold';
+    text-transform:uppercase;
+    text-decoration:none;
+    margin:0 10px;
+
+}
+
+/*Responsive login et navbar*/
+.togglecontainer {
+    display:none;
+    cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+
+.toggle {
+
+    transition: all .3s ease-out;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.toggle.active {
+    max-height:15em;
+}
+
+.toggle.active > * , .toggle.active .navbarleft > *{
+    display:block;
+    background:#080516;
+    color:white;
+    text-align:center;
+    font-family:"ManropeReg";
+
+}
+
+.toggle.active > a, .toggle.active .navbarleft > a{
+text-decoration:none;
+}
+.toggle.active > p {
+    font-style:italic;
+}
+
+.toggle hr {
+    width: 100%;
+    border: 1px solid white;
+    margin:5px 0;
+}
+.navbarmobile {
+    display:none;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .togglecontainer {
+        display:inline-block;
+    }
+
+    .navbarpc {
+    display:none;
+}
+    .navbarmobile {
+        display: flex;
+        justify-content: space-around;
+        align-items:center;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 780px) {
+
+}
+/* Page d'accueil */
+
+.pageaccueil {
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    color:white;
+    font-family:'ManropeReg';
+
+}
+
+.pageaccueil a {
+
+    border:1px solid white;
+    background:transparent;
+    padding:10px;
+    margin-top:30px;
+    color:white;
+    text-decoration:none;
+    transition: all ease-in-out .3s;
+
+}
+.pageaccueil a:hover{
+    background:white;
+    color:black;
+}
+
+.pageaccueil img {
+    width:30%;
+    margin-bottom:20px;
+}
+
+.pageaccueil h2 {
+    font-size:1.8rem;
+}
+
+.pageaccueil p {
+    text-align:center;
+    margin-top:20px;
+    width:25%;
+}
+
+/*Responsive Login */
+@media all and (max-width: 1200px) {
+    .pageaccueil h2 {
+
+        font-size: 1.0rem;
+    }
+}
+
+@media all and (max-width: 780px)
+{
+    .pageaccueil {
+        height:auto;
+        min-height:100vh;
+    }
+    .pageaccueil img {
+        margin-top: 100px;
+        width: 50%;
+    }
+    .pageaccueil h2 {
+        font-size: 1.2rem;
+        width: 50%;
+    }
+    .pageaccueil p {
+        font-size: 0.8rem;
+        text-align: justify;
+        width: 50%;
+    }
+
+    .pageaccueil a {
+        margin-bottom: 80px;
+        font-size: 0.8rem;
+    }
+}
+
+
+/* Separateur */
+
+.separateur {
+    background-image: radial-gradient(circle, #a32828, #80173b, #54173d, #291530, #080516);
+    width:100%;
+    height:10px;
+    border:none;
+}
+
+
+/* liste histoire */
+
+#listehistoire {
+    width:100%;
+
+    background:black;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    color:white;
+    padding-bottom:50px;
+
+
+}
+
+#listehistoire h2 {
+    font-family:'ManropeBold' ;
+    font-weight:normal;
+
+    font-size:3rem;
+
+    margin-top:200px;
+}
+
+#listehistoire p {
+    font-family:'ManropeReg' ;
+    margin-bottom:100px;
+}
+.contenuhistoire{
+    display:flex;
+
+    justify-content:center;
+
+}
+
+
+.histoire {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: flex-start;
+
+    margin: 50px;
+
+    color:black;
+
+    overflow:hidden;
+    height:450px;
+
+    width: 250px
+
+
+}
+
+
+.histoire a {
+
+    font-family:'ManropeReg';
+    color:black;
+    text-decoration:none;
+    width: 250px;
+    background:black;
+    position: relative;
+
+    height: 200px;
+    z-index:2;
+
+}
+.histoire a img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    opacity:0.5;
+    transition:all ease-in-out .3s;
+}
+
+.histoire a:hover img {
+    opacity:1;
+}
+
+.histoire p {
+    background:rgb(0, 0, 0,0.6);
+    font-family:'ManropeBold';
+    font-weight:bold;
+    text-transform: uppercase;
+    z-index:1;
+    color:white;
+
+    position:absolute;
+    top:50%;
+    left:0;
+    transform: translateY(-50%);
+
+    width:100%;
+    text-align:center;
+}
+.histoire hr {
+    margin:20px 0;
+    background-image: radial-gradient(circle, #a32828, #80173b, #54173d, #291530, #080516);
+    width:100%;
+    height:3px;
+    border:none;
+}
+.resume {
+
+
+    font-family:'ManropeReg';
+    color:white;
+    padding:10px;
+}
+
+
+/* Responsive */
+
+@media all and (max-width: 1200px) {
+ .contenuhistoire{
+        flex-direction: column;
+
+    }
+}
+@media all and (max-width: 780px)
+{
+#listehistoire > p {
+    width: 80%;
+    text-align: center;
+}
+}
+
+    /* 404 */
+
+.page404{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-transform:uppercase;
+}
+
+.page404 h1{
+    text-align : center;
+    font-size: 100px;
+    margin:0;
+    font-family:'ManropeBold';
+
+}
+
+.page404 h2{
+    text-align : center;
+    font-size: 1.6em;
+    font-family:'ManropeReg';
+
+
+}
+
+
+/*login*/
+
+#login{
+
+
+    position:absolute;
+    top: 10%;
+    right:15%;
+
+
+}
+#inscription {
+    position:absolute;
+    top: 10%; /* Vos règles CSS pour les mobiles ici */
+    right:10%;
+
+}
+
+#login, #inscription {
+    background:white;
+
+    padding:20px;
+
+    font-family:'ManropeReg';
+    border-radius:2px;
+
+    color: white;
+    background: linear-gradient(45deg, #35394a 0%, #1f222e 100%);
+    border-top: 2px solid #D8312A;
+
+    z-index:999;
+}
+
+#login input , #inscription input {
+    box-shadow:none;
+
+    background: #32364a;
+    padding:10px;
+    margin:5px;
+}
+#login .form-group {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+    margin:10px 0 ;
+}
+
+#login a {
+    margin-top:10px;
+    color:white;
+    text-decoration:none;
+    font-size:0.8rem;
+}
+#login h2, #inscription h2 {
+    font-size:1rem;
+    text-align:center;
+}
+
+
+
+#login button, #inscription button {
+    color: #D8312A;
+    border: 1px solid #D8312A;
+    border-radius:2px;
+    padding: 10px 60px;
+    background: transparent;
+    transition:all ease-in-out .3s;
+    margin-top:10px;
+}
+
+#login button:hover, #inscription button:hover{
+    background: #D8312A;
+    color:#1f222e;
+
+}
+
+#login .mb-0 {
+    display:flex;
+    flex-direction:column;
+}
+
+.icon {
+    margin-right:10px;
+}
+/* Responsive
+ */
+
+
+@media screen and (max-width: 1000px) {
+#login, #inscription {
+    position:absolute;
+    top: 30%;
+
+    right: 35%;
+}
+}
+/*navbar connecté*/
+
+.navbar a{
+    color:white;
+    font-family:'ManropeBold';
+    text-transform:uppercase;
+    text-decoration:none;
+    margin:0 10px;
+
+}
+
+.navbar p {
+    font-style: italic;
+    font-family: 'ManropeBold';
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 0 10px;
+
+
+
+}
+
+
+/*Responsive Login */
+
+@media all and (max-width: 480px)
+{
+
+}
+/* footer */
+
+footer {
+
+    background: #080516;
+    font-family:'ManropeReg';
+
+    text-align: center;
+    padding:10px;
+
+
+}
+
+
+footer hr {
+    background-image: radial-gradient(circle, #a32828, #80173b, #54173d, #291530, #080516);
+    width:100%;
+    height:3px;
+    border:none;
+
+    margin-bottom:10px;
+}
+
+footer .groupe p {
+    font-size:0.8rem;
+    font-weight:bold;
+}
+footer .nomsgr p {
+    font-size:0.7rem;
+    width:30%;
+    margin:0 auto;
+}
+
+
+/* Responsive */
+
+@media all and (max-width: 780px) {
+    footer .groupe p {
+        margin:0 auto 10px;
+        width:80%;
+
+}
+}
+
+/* Formulaire ajout chapitre */
+
+.creerChapitre, .creerHistoire{
+    height:70vh;
+    margin:150px auto;
+    width:25%;
+}
+
+.lierChapitre{
+    height:70vh;
+    margin:150px auto;
+    width:15%;
+}
+
+.card{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(45deg, #35394a 0%, #1f222e 100%);
+    border-top: 2px solid #D8312A;
+
+    margin:10px auto ;
+    padding: 20px;
+}
+
+.card-header{
+    font-size:2em;
+    color:white;
+    font-family:'ManropeBold';
+    text-transform:uppercase;
+    text-decoration:none;
+    text-align:center;
+}
+
+
+.creerChoix input,.creerChoix textarea, .btn-primary{
+    box-shadow:none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #32364a;
+    padding: 10px;
+    margin:5px 0;
+    border:none;
+    width:100%;
+
+}
+
+.creerChoix textarea {
+    resize:none;
+}
+.card .btn-primary {
+    color: #D8312A;
+    border: 1px solid #D8312A;
+    border-radius:2px;
+    padding: 10px 60px;
+    background: transparent;
+    transition:all ease-in-out .3s;
+    margin-top:10px;
+}
+
+.card .btn-primary:hover {
+    background: #D8312A;
+    color:#1f222e;
+
+}
+/* Responsive */
+@media all and (max-width: 1200px) {
+    .lierChapitre {
+        width:20%;
+    }
+}
+@media all and (max-width: 980px) {
+    .creerChapitre, .creerHistoire {
+        width:40%;
+    }
+
+    .lierChapitre {
+        width: 50%;
+    }
+
+}
+
+@media all and (max-width: 780px) {
+    .creerChapitre, .creerHistoire{
+        width:90%;
+
+}
+    .card-header{
+        font-size: 1.2rem;
+
+    }
+}
+@media all and (max-width: 360px) {
+
+    .lierChapitre {
+        width: 70%;
+    }
+}
+
+/* apercu histoire */
+.apercuhistoire {
+    background: #080516;
+
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    font-family:'ManropeReg';
+
+    height: 100vh;
+}
+.apercuhistoire h1 {
+    font-family:'ManropeBold';
+    text-transform: uppercase;
+
+    font-size:3rem;
+    font-weight:normal;
+    margin-top:50px;
+
+}
+
+.apercuhistoire img {
+    width:auto;
+    max-height:400px;
+}
+
+.apercuhistoire a {
+    margin:20px 0;
+    text-decoration:none;
+    background-image: radial-gradient(circle, #a32828, #80173b, #54173d, #291530, #080516);
+    padding:10px;
+    color:white;
+    transition: all ease-in-out .3s;
+}
+
+.apercuhistoire a:hover {
+
+    letter-spacing:0.3rem;
+}
+.apercuhistoire .resumechapitre {
+    text-align: center;
+    width:75%;
+}
+/* Responsive */
+
+@media all and (max-width: 780px) {
+    .apercuhistoire {
+        min-height: 100vh;
+    }
+.apercuhistoire h1 {
+font-size:1.5rem;
+    margin-bottom: 10px;
+}
+    .apercuhistoire p {
+        width:80%;
+    }
+
+.apercuhistoire h2 {
+    font-size:0.8rem;
+}
+}
+
+/* Lecture Chapitre */
+
+.lecturechapitre {
+    background: #080516;
+
+
+    min-height: 100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;;
+
+}
+.lecturechapitrecontenu {
+    width:70%;
+    margin:0 auto;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    font-family:'ManropeReg';
+    z-index:2;
+
+    color:white;
+
+
+
+}
+
+
+
+.lecturechapitrebg {
+    width:auto;
+    height: 450px;
+
+    z-index: 1;
+
+    margin: 0 auto;
+
+
+}
+
+.progression {
+    margin:0 auto;
+}
+.lecturechapitrecontenu > * {
+
+}
+.lecturechapitrecontenu ul {
+    margin-top:20px;
+    list-style-type: none;
+}
+
+.lecturechapitrecontenu ul li a {
+    text-decoration:none;
+    color:red;
+    transition:all ease-in-out .3s;
+}
+.lecturechapitrecontenu ul li a:hover {
+   color:white;
+}
+
+.titrechapitre {
+    font-weight: bold;
+}
+@media screen and (max-width: 780px) {
+
+    .lecturechapitrebg {
+        max-width: 100%;
+        height: auto;
+
+    }
+}
+
+/* Progression */
+
+.progression a{
+
+    background:  #a32828;
+    color:white;
+    padding: 5px 10px;
+    border-radius:3px;
+    font-family: "ManropeBold";
+    text-decoration:none;
+    margin:0 10px;
+}
